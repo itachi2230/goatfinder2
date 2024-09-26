@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!
+{% endblock %}
+
+{% block body %}
+	<style>
+		.example-wrapper {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+		.example-wrapper code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+	</style>
+
+	<div class="example-wrapper">
+		<h1 class='btn-block'>Goat finder 🐐
+		</h1>
+		{% if code == 2 %}
+			<h2 class="text-success">Trouvé
+			</h2>
+			<em>
+				Pour ouvrir la page cliquez sur le lien
+			</em>
+			<a href="{{lien}}">{{lien}}</a>
+		{% else %}
+			<h2 class="text-red">Non Trouvé
+			</h2>
+			<em>la recherche automatique se relance chaque 5s si vous restez sur la page</em>
+		{% endif %}
+
+		<em>By Itachi223</em>
+	</div>
+{% endblock %}
